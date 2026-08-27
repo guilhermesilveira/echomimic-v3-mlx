@@ -1,0 +1,30 @@
+[project]
+name = "echomimic-v3-mlx-monorepo"
+version = "0.1.0"
+description = "Apple Silicon MLX/Metal port of EchoMimic V3 Flash"
+requires-python = ">=3.11,<3.12"
+dependencies = ["echomimic-mlx[audio]"]
+
+[tool.uv.sources]
+echomimic-mlx = { workspace = true }
+
+[tool.uv.workspace]
+members = ["packages/echomimic-mlx"]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.3",
+  "ruff>=0.12",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["packages/echomimic-mlx/tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["packages/echomimic-mlx/src/echomimic_mlx/wan"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

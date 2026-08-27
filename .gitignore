@@ -1,0 +1,13 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Local model/input/output data never belongs in Git.
+models/
+inputs/private/
+outputs/
+benchmarks/results/

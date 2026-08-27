@@ -1,0 +1,34 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "echomimic-mlx"
+version = "0.1.0"
+description = "Native MLX implementation of EchoMimic V3 Flash"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "einops>=0.8.2",
+  "huggingface-hub>=0.34",
+  "mlx>=0.31.0",
+  "numpy>=2.0",
+  "pillow>=10",
+  "safetensors>=0.5",
+  "tokenizers>=0.21",
+  "torch>=2.7",
+  "tqdm>=4.67",
+]
+
+[project.optional-dependencies]
+audio = [
+  "librosa>=0.11",
+  "pyloudnorm>=0.1.1",
+  "soundfile>=0.13",
+  "transformers>=4.46.2,<5",
+]
+
+[project.scripts]
+echomimic-mlx-smoke = "echomimic_mlx.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/echomimic_mlx"]
