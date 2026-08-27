@@ -434,7 +434,8 @@ def generate_smoke_video(
             "The released Flash forward retains but does not use q_audio.",
             "The released 2512 Flash path applies audio CFG only; text CFG is not applied.",
             "Attention and VAE latency remain separate acceptance gates.",
-            "Seventeen frames cannot establish long-window temporal continuity.",
+            f"A {config.frames / config.fps:.2f}-second sample cannot establish "
+            "long-window temporal continuity.",
         ),
     )
     report.write(output_path.with_suffix(".json"))
