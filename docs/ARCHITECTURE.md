@@ -79,10 +79,13 @@ CLIP, text, and aligned audio conditioning.
 1. Strict checkpoint-key conversion with no missing or unexpected tensors.
 2. Synthetic shape tests for audio grouping, projection, cross-attention, and
    the complete small Transformer.
-3. Numerical comparison of one real block against PyTorch/CPU.
+3. Numerical comparison of synthetic audio projection and cross-attention
+   components against PyTorch/CPU.
 4. Load the full Flash Transformer and record active/peak Metal memory.
 5. Generate 17 frames at 512x512 with eight steps.
 6. Decode through the Wan VAE and mux the source audio with FFmpeg.
 
-All six gates passed for the first technical smoke. Detailed measurements and
-the exact acceptance boundary are recorded in `FIRST_SMOKE.md`.
+All six gates passed for the first technical smoke at the stated scope. The
+tests do not establish full real-weight numerical equivalence for every Wan,
+VAE, text, or image-encoder component. Detailed measurements and the exact
+acceptance boundary are recorded in `FIRST_SMOKE.md`.

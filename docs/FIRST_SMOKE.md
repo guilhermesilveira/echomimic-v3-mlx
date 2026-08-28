@@ -22,9 +22,9 @@ the official `antgroup/echomimic_v3` demo at revision
 - `datasets/echomimicv3_demos/audios/01.WAV`
 - `datasets/echomimicv3_demos/prompts/01.txt`
 
-Those assets, all model weights, and generated outputs remain local and are
-excluded from Git. Model and source revisions are recorded in
-`upstreams.lock.json`.
+Those assets, all model weights, and generated outputs were excluded from Git.
+The current checkout does not contain generated outputs. Model and source
+revisions are recorded in `upstreams.lock.json`.
 
 ## Configuration
 

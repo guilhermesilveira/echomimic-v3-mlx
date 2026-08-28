@@ -1,3 +1,6 @@
+# Adapted from antgroup/echomimic_v3 and VideoX-Fun at pinned revisions.
+# Modified for MLX by echomimic-v3-mlx contributors.
+# Licensed under Apache-2.0; see the repository LICENSE.
 """End-to-end EchoMimic V3 Flash inference on MLX/Metal."""
 
 from __future__ import annotations

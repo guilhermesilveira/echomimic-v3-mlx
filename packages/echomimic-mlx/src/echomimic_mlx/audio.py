@@ -1,3 +1,6 @@
+# Adapted from antgroup/echomimic_v3 and VideoX-Fun at pinned revisions.
+# Modified for MLX by echomimic-v3-mlx contributors.
+# Licensed under Apache-2.0; see the repository LICENSE.
 """EchoMimic V3 audio grouping and projection in MLX."""
 
 from __future__ import annotations
